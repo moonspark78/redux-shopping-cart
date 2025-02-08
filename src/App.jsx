@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router';
 import './App.css'
 
 function App() {
@@ -5,7 +6,10 @@ function App() {
 
   return (
     <>
-      <p>lolo</p>
+      <nav>Navbar</nav>
+      <main>
+        <Outlet/>
+      </main>
     </>
   )
 }
