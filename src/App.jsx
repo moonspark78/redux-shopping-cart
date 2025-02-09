@@ -6,12 +6,12 @@ function App() {
 
 
   return (
-    <>
+    <div className='bg-white'>
       <Navbar/>
-      <main className='max-w-7xl mx-auto min-h-screen mt-12'>
+      <main className='max-w-7xl text-black mx-auto min-h-screen mt-12'>
         <Outlet/>
       </main>
-    </>
+    </div>
   )
 }
 
