@@ -1,9 +1,11 @@
+import { Link } from "react-router";
+
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="bg-indigo-950 text-white">
+      <div className="navbar max-w-7xl mx-auto">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/" className="btn btn-ghost text-xl">ShoppingCart</Link>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -12,7 +14,7 @@ const Navbar = () => {
               role="button"
               className="btn btn-ghost btn-circle"
             >
-              <div className="indicator">
+              <div className="indicator"> 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
