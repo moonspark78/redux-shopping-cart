@@ -16,6 +16,7 @@ const ProductCard = ({ product }) => {
         <h2 className="card-title">{name}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim aliquam mauris.</p>
         <div className="card-actions justify-end">
+        <p className="font-bold text-lg">${price}</p>
           <button className="btn btn-primary">Add to Cart</button>
         </div>
       </div>
