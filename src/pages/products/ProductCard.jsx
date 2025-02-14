@@ -12,11 +12,11 @@ const ProductCard = ({ product }) => {
           className="h-full w-full object-cover"
         />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div className="card-body bg-white">
+        <h2 className="card-title">{name}</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim aliquam mauris.</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary">Add to Cart</button>
         </div>
       </div>
     </div>
