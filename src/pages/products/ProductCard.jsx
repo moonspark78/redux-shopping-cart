@@ -5,10 +5,11 @@ const ProductCard = ({ product }) => {
   console.log(product);
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
-      <figure>
+      <figure className="h-98">
         <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          src={image}
           alt="Shoes"
+          className="h-full w-full object-cover"
         />
       </figure>
       <div className="card-body">
