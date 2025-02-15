@@ -36,7 +36,18 @@ const AddProduct = () => {
 
 
             {/* Price & Date */}
-
+            <div className='grid grid-cols-2 gap-4'>
+                <div>
+                    <label className='block text-sm font-medium text-gray-600'>Price : </label>
+                    <input type='number' name='price' id='price' placeholder='$100' className='w-full bg-gray-50 text-black mt-1 
+                p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'/>
+                </div>
+                <div>
+                    <label className='block text-sm font-medium text-gray-600'>Upload Date : </label>
+                    <input type='date' name='date' id='date' className='w-full bg-gray-50 text-black mt-1 
+                p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'/>
+                </div>
+            </div>
 
         </form>
     </div>
