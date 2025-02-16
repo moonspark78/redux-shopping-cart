@@ -1,5 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../store/products/productSlice'
 
 const AddProduct = () => {
 
@@ -10,7 +12,11 @@ const AddProduct = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const dispatch = useDispatch()
+
+  const onSubmit = (data) => {
+    dispatch(addProduct(data))
+  }
 
 
 
