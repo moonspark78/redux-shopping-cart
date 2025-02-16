@@ -49,6 +49,8 @@ const AddProduct = () => {
                 </div>
             </div>
 
+            <button type='submit' className="btn btn-primary w-full text-white py-2.5 px-4 rounded-lg">Add Product</button>
+
         </form>
     </div>
   )
