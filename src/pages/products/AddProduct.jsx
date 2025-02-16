@@ -23,14 +23,14 @@ const AddProduct = () => {
             {/* Name */}
             <div>
                 <label className='block text-sm font-medium text-gray-600'>Product Name : </label>
-                <input type='text' name='name' id='name' placeholder='Product 1' className='w-full bg-gray-50 text-black mt-1 
+                <input {...register("name", { required: true })} type='text' name='name' id='name' placeholder='Product 1' className='w-full bg-gray-50 text-black mt-1 
                 p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'/>
             </div>
 
             {/* Category */}
             <div>
                 <label className='block text-sm font-medium text-gray-600'>Category Name : </label>
-                <select name='category' id='category' className='w-full bg-gray-50 text-black mt-1 
+                <select {...register("category", { required: true })} name='category' id='category' className='w-full bg-gray-50 text-black mt-1 
                 p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'>
                     <option value=''>Select a Category</option>
                     <option value='clothing'>Clothing</option>
@@ -43,7 +43,7 @@ const AddProduct = () => {
             {/* Product Image Url */}
             <div>
                 <label className='block text-sm font-medium text-gray-600'>Product URL : </label>
-                <input type='text' name='image' id='image' placeholder='paste your url' className='w-full bg-gray-50 text-black mt-1 
+                <input {...register("image", { required: true })} type='text' name='image' id='image' placeholder='paste your url' className='w-full bg-gray-50 text-black mt-1 
                 p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'/>
             </div>
 
@@ -52,12 +52,12 @@ const AddProduct = () => {
             <div className='grid grid-cols-2 gap-4'>
                 <div>
                     <label className='block text-sm font-medium text-gray-600'>Price : </label>
-                    <input type='number' name='price' id='price' placeholder='$100' className='w-full bg-gray-50 text-black mt-1 
+                    <input {...register("price", { required: true })} type='number' name='price' id='price' placeholder='$100' className='w-full bg-gray-50 text-black mt-1 
                 p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'/>
                 </div>
                 <div>
                     <label className='block text-sm font-medium text-gray-600'>Upload Date : </label>
-                    <input type='date' name='date' id='date' className='w-full bg-gray-50 text-black mt-1 
+                    <input {...register("date", { required: true })} type='date' name='date' id='date' className='w-full bg-gray-50 text-black mt-1 
                 p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-600'/>
                 </div>
             </div>
