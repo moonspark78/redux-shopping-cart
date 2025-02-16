@@ -1,11 +1,24 @@
 import React from 'react'
+import { useForm } from "react-hook-form"
 
 const AddProduct = () => {
+
+   const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
+
+
+
   return (
     <div className='max-w-md mx-auto bg-white shadow-lg rounded-lg p-6'>
         <h2 className='text-sl font-semibold text-gray-700 mb-4'>Add New Product</h2>
 
-        <form className='space-y-4'>
+        <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
 
             {/* Name */}
             <div>
