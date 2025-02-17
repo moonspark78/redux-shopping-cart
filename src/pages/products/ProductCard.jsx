@@ -1,8 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/carts/cartSlice";
 
 const ProductCard = ({ product }) => {
   const { id, name, price, image, category, date } = product || {};
   console.log(product);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  }
+
   return (
     <div className="card bg-base-100 w-80 shadow-xl">
       <figure className="h-80">

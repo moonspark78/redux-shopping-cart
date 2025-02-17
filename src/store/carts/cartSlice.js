@@ -12,7 +12,7 @@ const cartSlice = createSlice({
             if (existingProduct) {
                 alert('Product already in cart')
             } else {
-                state.push({id: Date.now(), ...action.payload, quantity: 1 })
+                state.push({id: Date.now(), ...action.payload, productId: action.payload.id, quantity: 1 })
             }
         }
 
