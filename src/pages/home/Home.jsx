@@ -20,7 +20,7 @@ const Home = () => {
             </div>
 
             <div className='col-span-2'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-y-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-y-10 justify-items-center'>
                     {
                         products.length ? products.map((product, index) => (
                             <ProductCard key={index} product={product}/>
