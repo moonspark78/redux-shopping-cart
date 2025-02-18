@@ -4,7 +4,7 @@ import { addToCart } from "../../store/carts/cartSlice";
 
 const ProductCard = ({ product }) => {
   const { id, name, price, image, category, date } = product || {};
-  console.log(product);
+  //console.log(product);
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
