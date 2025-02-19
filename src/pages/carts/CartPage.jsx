@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 const CartPage = () => {
+    const carts= useSelector(state => state.carts)
   return (
     <div className='py-12 max-w-7xl mx-auto container px-4'>
         <h2 className='text-xl font-bold mb-5'>Shopping Cart</h2>
