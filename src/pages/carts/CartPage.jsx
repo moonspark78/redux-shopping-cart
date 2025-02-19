@@ -11,7 +11,7 @@ const CartPage = () => {
         <div className='flex flex-col md:flex-row justify-between md:gap-8 gap-4'>
             <div>
                 {
-                  carts.length ? carts.map((item, index) => () => (
+                  carts.length ? carts.map((item, index) => (
                     <CartItem key={index} item={item}/>
                   )) : <div>Cart is empty</div>
                 }
