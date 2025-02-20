@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CartItem = ({item}) => {
-    const {id, name, price, image, category} = item || {};
+    const {id, name, price, image, category, quantity} = item || {};
   return (
     <div>
         <div className='rounded-lg'>
@@ -14,8 +14,21 @@ const CartItem = ({item}) => {
                     {/* product details */}
                     <div>
                         <h3 className='text-lg font-bold text-gray-900'>{name}</h3>
-                        <p className='text-sm text-gray-500'>{price}</p>
+                        <p className='text-sm text-gray-500'>Price: {price}</p>
+                        <p className='text-sm text-gray-600'>Category: {category}</p>
                     </div>
+
+                    {/*  */}
+                    <div>
+                        <div>
+                            <span>-</span>
+                            <input type='number' value={quantity} className='size-8 border bg-white text-center
+                            text-xs outline-none' readOnly/>
+                            <span>+</span>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
