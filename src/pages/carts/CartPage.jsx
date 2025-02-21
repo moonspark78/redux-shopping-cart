@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
+import BillingPage from './BillingPage';
 
 const CartPage = () => {
     const carts= useSelector(state => state.carts)
@@ -18,7 +19,9 @@ const CartPage = () => {
             </div>
 
 
-            <div>Billing Page</div>
+            <div>
+              <BillingPage/>
+            </div>
         </div>
     </div>
   )

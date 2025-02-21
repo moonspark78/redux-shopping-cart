@@ -7,7 +7,7 @@ const CartItem = ({item}) => {
   return (
     <div>
         <div className='rounded-lg'>
-            <div className='sm:flex sm:justify-start shadow-md p-6 bg-white rounded-lg mb-6 justify-between'>
+            <div className='sm:flex sm:justify-start items-center shadow-md p-6 bg-white rounded-lg mb-6 justify-between'>
                 {/* product image */}
                 <img src={image} alt='' className='w-full h-28 sm:w-40 object-cover rounded'/>
 
