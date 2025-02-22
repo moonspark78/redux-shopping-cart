@@ -16,7 +16,7 @@ const BillingPage = () => {
         </div>
         <div className='mb-2 flex space-x-6 justify-between'>
             <p className="text-gray-700">Shipping</p>
-            <p className="text-gray-700">${tax}</p>
+            <p className="text-gray-700">${tax.toFixed(2)}</p>
         </div>
         <div className='mb-2 flex space-x-6 justify-between'>
             <p className="text-gray-700">Total</p>

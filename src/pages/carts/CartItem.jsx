@@ -1,9 +1,17 @@
 import React from 'react'
 import { ImCross } from "react-icons/im";
+import { useDispatch } from 'react-redux';
+import { increaseQuantity } from "../../store/carts/cartSlice";
 
 
 const CartItem = ({item}) => {
     const {id, name, price, image, category, quantity} = item || {};
+    const dispatch = useDispatch();
+
+    const handleIncreaseQuantity = () => {
+        dispatch(increaseQuantity(id))
+    };
+
   return (
     <div>
         <div className='rounded-lg'>
@@ -27,7 +35,7 @@ const CartItem = ({item}) => {
                             hover:bg-blue-500 hover:text-white'>-</span>
                             <input type='number' value={quantity} className='size-8 border bg-white text-center
                             text-xs outline-none' readOnly/>
-                            <span className='cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100
+                            <span onClick={handleIncreaseQuantity} className='cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100
                             hover:bg-blue-500 hover:text-white'>+</span>
                         </div>
 
