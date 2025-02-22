@@ -14,10 +14,17 @@ const cartSlice = createSlice({
             } else {
                 state.push({id: Date.now(), ...action.payload, productId: action.payload.id, quantity: 1 })
             }
+        },
+
+        //increase quantity
+        increaseQuantity: (state, action) => {
+            const product = state.find((product) => product.id === action.payload)
+            if (product) {
+                product.quantity++
+            }
         }
 
 
-        //increase quantity
         //decrease quantity
         //remove from Cart
     },

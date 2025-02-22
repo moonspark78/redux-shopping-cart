@@ -10,15 +10,15 @@ const BillingPage = () => {
 
   return (
     <div className='mt-6 rounded-lg border bg-white p-6 shadow-md md:mt-0'>
-        <div className='mb-2 flex justify-between'>
+        <div className='mb-2 flex space-x-6 justify-between'>
             <p className="text-gray-700">Subtotal</p>
             <p className="text-gray-700">${subTotal}</p>
         </div>
-        <div className='mb-2 flex justify-between'>
+        <div className='mb-2 flex space-x-6 justify-between'>
             <p className="text-gray-700">Shipping</p>
             <p className="text-gray-700">${tax}</p>
         </div>
-        <div className='mb-2 flex justify-between'>
+        <div className='mb-2 flex space-x-6 justify-between'>
             <p className="text-gray-700">Total</p>
             <p className="text-gray-700">${totalBillings}</p>
         </div>
