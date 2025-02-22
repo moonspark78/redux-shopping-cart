@@ -14,6 +14,14 @@ const BillingPage = () => {
             <p className="text-gray-700">Subtotal</p>
             <p className="text-gray-700">${subTotal}</p>
         </div>
+        <div className='mb-2 flex justify-between'>
+            <p className="text-gray-700">Shipping</p>
+            <p className="text-gray-700">${tax}</p>
+        </div>
+        <div className='mb-2 flex justify-between'>
+            <p className="text-gray-700">Total</p>
+            <p className="text-gray-700">${totalBillings}</p>
+        </div>
     </div>
   )
 }
