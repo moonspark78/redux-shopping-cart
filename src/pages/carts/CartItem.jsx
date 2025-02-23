@@ -2,6 +2,8 @@ import React from 'react'
 import { ImCross } from "react-icons/im";
 import { useDispatch } from 'react-redux';
 import { increaseQuantity } from "../../store/carts/cartSlice";
+import { decreaseQuantity } from "../../store/carts/cartSlice";
+import { removeFromCart } from "../../store/carts/cartSlice";
 
 
 const CartItem = ({item}) => {
@@ -11,6 +13,16 @@ const CartItem = ({item}) => {
     const handleIncreaseQuantity = () => {
         dispatch(increaseQuantity(id))
     };
+
+    const handleDecreaseQuantity = () => {
+        dispatch(decreaseQuantity(id))
+    };
+
+    const handleRemoveProduct = () => {
+        dispatch(removeFromCart(id))
+    };
+
+
 
   return (
     <div>
@@ -31,7 +43,7 @@ const CartItem = ({item}) => {
                     {/*  */}
                     <div className='mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6'>
                         <div className='flex items-center border-gray-100'>
-                            <span className='cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100
+                            <span onClick={handleDecreaseQuantity} className='cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100
                             hover:bg-blue-500 hover:text-white'>-</span>
                             <input type='number' value={quantity} className='size-8 border bg-white text-center
                             text-xs outline-none' readOnly/>
@@ -41,7 +53,7 @@ const CartItem = ({item}) => {
 
                         <div className='flex items-center space-x-4'>
                             <p>${(price*quantity).toFixed(2)}</p>
-                            <button className="text-red-500 cursor-pointer active:opacity-90" >
+                            <button onClick={handleRemoveProduct} className="text-red-500 cursor-pointer active:opacity-90" >
                                 <ImCross />
                             </button>
                         </div>
